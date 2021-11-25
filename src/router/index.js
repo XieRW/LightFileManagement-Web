@@ -1,8 +1,9 @@
-import App from '../App'
+import {createRouter } from 'vue-router';
 
-export default [{
+var routers = [{
     path: '/',
-    component: App,
+    name: 'login',
+    component: () => import(/* webpackChunkName: "FlightPatrolIndependentView" */ '@/pages/Login.vue'),
     // children: [{
     //     path: '',
     //     component: r => require.ensure([], () => r(require('../pages/home')), 'home')
@@ -14,3 +15,8 @@ export default [{
     //     component: r => require.ensure([], () => r(require('../page/score')), 'score')
     // }]
 }]
+
+
+export default createRouter({
+    routers
+})
