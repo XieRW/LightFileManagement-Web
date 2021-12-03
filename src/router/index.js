@@ -3,7 +3,7 @@ import {createRouter } from 'vue-router';
 var routers = [{
     path: '/',
     name: 'login',
-    component: () => import(/* webpackChunkName: "FlightPatrolIndependentView" */ '@/pages/Login.vue'),
+    component: () => import(/* webpackChunkName: "FlightPatrolIndependentView" */ '../pages/Login.vue'),
     // children: [{
     //     path: '',
     //     component: r => require.ensure([], () => r(require('../pages/home')), 'home')
