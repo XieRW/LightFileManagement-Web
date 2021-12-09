@@ -15,6 +15,10 @@ const routes = [{
     path: '/login',
     name: 'login',
     component: () => import(/* webpackChunkName: "FlightPatrolIndependentView" */ '@/views/Login.vue'),
+},{
+    path: '/signup',
+    name: 'signup',
+    component: () => import(/* webpackChunkName: "FlightPatrolIndependentView" */ '@/views/signup.vue'),
 }];
 export default createRouter({
     history: createWebHashHistory(),
