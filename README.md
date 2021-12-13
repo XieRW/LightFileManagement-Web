@@ -1,4 +1,5 @@
-# vue3-demo
+# LightFileManagement
+[LightFileManagement的前端项目](https://github.com/XieRW/LightFileManagement)。基于vue3，vue-cli，vuex，vue-router，typescript，elemenyUI搭建。
 
 ## Project setup
 ```
