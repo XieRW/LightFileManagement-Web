@@ -22,36 +22,35 @@
 </template>
 
 <script lang="ts">
-    import {defineComponent} from 'vue';
+    import {defineComponent, getCurrentInstance} from 'vue';
+    import th from "element-ui/src/locale/lang/th";
 
     export default defineComponent({
         name: 'Login',
-        data() {
-            return {
-                user: {
-                    name: '',
-                    pass: '',
-                    date1: '',
-                    date2: '',
-                    delivery: false,
-                    type: [],
-                    resource: '',
-                    desc: '',
-                },
+        setup(){
+            const user = {
+                name: '',
+                pass: '',
             }
-        },
-        methods: {
-            login() {
-                console.log('login!');
-                console.log(this);
-                this.$router.push('/home');
-            },
-            signup() {
-                console.log('signup!');
-                this.$router.push('/signup');
-            },
-        },
+            const instance = getCurrentInstance();
 
+            function login() {
+                console.log(instance)
+                // this.$api.post(window.config.baseURL+'/auth/permit/login').then((res)=>{
+                //     console.log(res);
+                // })
+                // instance.$router.push('/home');
+            }
+            function signup() {
+                console.log('signup!');
+                // instance.$router.push('/signup');
+            }
+            return {
+                user,
+                login,
+                signup
+            }
+        }
     });
 </script>
 <style lang="css">
